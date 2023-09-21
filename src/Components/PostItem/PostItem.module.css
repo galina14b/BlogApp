@@ -1,0 +1,12 @@
+.list-item {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #006d77;
+  border-radius: 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

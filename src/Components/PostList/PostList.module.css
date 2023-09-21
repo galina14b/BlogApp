@@ -1,0 +1,10 @@
+.posts {
+  width: 80%;
+  padding: 30px 20px;
+  margin: 0 auto;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}

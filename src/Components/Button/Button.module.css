@@ -1,0 +1,17 @@
+.btn {
+  width: 100px;
+  height: 40px;
+  border: none;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.edit {
+  background-color: #83c5be;
+  margin-right: 10px;
+}
+
+.delete {
+  background-color: #e29578;
+}
