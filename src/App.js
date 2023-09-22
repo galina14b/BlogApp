@@ -2,7 +2,10 @@ import React, {useState} from "react";
 import PostList from "./Components/PostList/PostList";
 import css from './App.module.css';
 import Form from "./Components/Form/Form";
-import Select from "./Components/Select/Select";
+import PostFilter from "./Components/PostFilter/PostFilter";
+import Modal from "./Components/Modal/Modal";
+import Button from "./Components/Button/Button";
+import { useSortedAndFilteredPosts, useSortedPosts } from "./Hooks/usePost";
 
 function App() {
   
@@ -25,12 +28,12 @@ function App() {
       body: 'Aorem dkf;dkv kdldk;ckdl ;kdlfldjld ksjdljlfj',
     },
   ]);
-  const [selectedValue, setSelectValue] = useState('');
+  const [filter, setFilter] = useState({ select: '', search: '' });
+  const [modal, setModal] = useState(false);
+  
+  const sortedPosts = useSortedPosts(posts, filter.select);
+  const sortedAndSelectedPosts = useSortedAndFilteredPosts(sortedPosts, filter.search);
 
-  const sortPosts = (value) => {
-    setSelectValue(value);
-    setPosts([...posts].sort((a,b) => a[value].localeCompare(b[value])))
-  }
 
   const addNewPost = (newPost) => {
     setPosts([...posts, newPost])
@@ -42,17 +45,19 @@ function App() {
 
   return (
     <div className={css.app}>
+      <h1>Daily Planner</h1>
 
-      <Form addPost={addNewPost} />
+      <Button name={ 'Add New Post'} type={'modal'} setModal={setModal} />
 
-      <Select options={[
-        { value: 'title', name: 'According to title' },
-        { value: 'body', name: 'According to body' },
-      ]}
-        optionChange={sortPosts}
-        value={ selectedValue} />
+      
+      <Modal visible={modal} setModal={setModal}>
+        <Form addPost={addNewPost} setModal={setModal}/>
+      </Modal>
+      
+      
+      <PostFilter filter={filter} setFilter={setFilter} />
 
-      <PostList title={"Tasks for Monday"} posts={ posts } remove={removePost} />
+      {sortedAndSelectedPosts && <PostList title={"Tasks for Today"} posts={ sortedAndSelectedPosts } remove={removePost} />}
     </div>
   );
 }

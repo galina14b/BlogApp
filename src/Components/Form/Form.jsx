@@ -1,6 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import css from './Form.module.css';
 
-const Form = ({ addPost }) => {
+const Form = ({ addPost, setModal }) => {
 
   const [post, setPost] = useState({
     title: '',
@@ -10,26 +11,29 @@ const Form = ({ addPost }) => {
   function createNewPost(event) {
     event.preventDefault();
     addPost({ id: new Date(), ...post });
-    setPost({title: '', body: ''})
+    setPost({ title: '', body: '' });
+    setModal(false)
   }
 
   return (
-    <form onSubmit={createNewPost}>
+    <form onSubmit={createNewPost} className={css.form}>
       <input
+          className={css.input}
           type="text"
           placeholder="Input title"
           value={post.title}
           onChange={e => setPost({...post, title: e.target.value})}  
         />
         
-        <input
-          type="text"
+      <input
+          className={css.input}
+          type="textarea"
           placeholder="Input text"
           value={post.body}
           onChange={e => setPost({...post, body: e.target.value})}  
         />
         
-        <button type="submit">Add</button>
+        <button className={css.btn} type="submit">Add</button>
     </form>
   )
 }

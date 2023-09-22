@@ -8,7 +8,7 @@ const PostItem = ({ id, title, body, remove }) => {
     <li className={css['list-item']}>
       
       <div className={css.content}>
-        <div>
+        <div className={css.info}>
           <h3>{title}</h3>
           <p>{body}</p>
         </div>
