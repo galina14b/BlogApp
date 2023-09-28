@@ -1,0 +1,7 @@
+.loader {
+  height: 100vh;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: #21282d;
+}

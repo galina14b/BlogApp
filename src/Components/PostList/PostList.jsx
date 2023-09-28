@@ -4,15 +4,6 @@ import css from './PostList.module.css';
 
 const PostList = ({ title, posts, remove }) => {
   
-  if (!posts.length) {
-    return (
-      <div className={css.posts}>
-        <h3 className={css.title}>No Posts Found</h3>
-      </div>
-
-    )
-  }
-  
   return (
     <div className={css.posts}>
       <h2>{title}</h2>

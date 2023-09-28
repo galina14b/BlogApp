@@ -1,7 +1,7 @@
 .posts {
-  width: 80%;
-  padding: 30px 20px;
-  margin: 0 auto;
+  margin-top: 50px;
+  height: fit-content;
+  background-color: #21282d;
 }
 
 .title {

@@ -1,0 +1,47 @@
+.navbar {
+  padding: 25px 40px;
+  position: absolute;
+}
+
+.list {
+  list-style: none;
+}
+
+.list-item {
+  padding: 10px 0;
+}
+
+.link {
+  margin-right: 30px;
+  text-decoration: none;
+  color: #aadcd3;
+  font-weight: 600;
+  border-bottom: solid 2px transparent;
+  transition: linear .5s;
+}
+
+.link:hover {
+  border-bottom: solid 2px #aadcd3;}
+
+.nav .active {
+  border-bottom: solid 2px #aadcd3;
+  margin-right: 30px;
+  text-decoration: none;
+  color: #aadcd3;
+  font-weight: 600;
+}
+
+.btn {
+  margin-right: 30px;
+  color: #aadcd3;
+  font-weight: 600;
+  border: none;
+  border-bottom: solid 2px transparent;
+  transition: linear .5s;
+  background-color: transparent;
+}
+
+.btn:hover {
+  border-bottom: solid 2px #aadcd3;
+  cursor: pointer;
+}

@@ -1,5 +1,14 @@
 .form {
-  margin: 50px auto;
+  margin: 0 auto;
+    padding: 50px 40px;
+    height: 100vh;
+}
+
+.title {
+  margin-bottom: 30px;
+  color: #fffefe;
+  text-align: center;
+  font-weight: 600;
 }
 
 .input {
@@ -16,7 +25,7 @@
 .btn {
   margin: 0 auto;
   display: block;
-  color: #fffefe;  
+  color: #fffefe;
   width: 70%;
   height: 50px;
   border: solid 1px transparent;

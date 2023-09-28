@@ -1,8 +1,8 @@
+import css from './Select.module.css';
 
-const Select = ({value, optionChange, options}) => {
+const Select = ({optionChange, options}) => {
   return (
-    <select onChange={(event) => optionChange(event.target.value)}>
-      <option disabled value={value}>Сортувати за...</option>
+    <select className={css.select} onChange={(event) => optionChange(event.target.value)}>
       {options.map(item => <option key={item.value} value={item.value}>{ item.name}</option>)}
     </select>
   )

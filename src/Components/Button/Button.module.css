@@ -1,17 +1,58 @@
 .btn {
-  width: 100px;
-  height: 40px;
-  border: none;
+  background-color: #e62b28;
+  padding: 10px;
+  color: #21282d;
+  width: 130px;
+  border: solid 1px transparent;
   font-size: 16px;
   border-radius: 10px;
-  font-weight: 500;
+  font-weight: 400;
+  transition: linear .5s;
 }
 
-.edit {
-  background-color: #4ecdc4;
+.btn:hover {
+  cursor: pointer;
+  border: solid 1px #e62b28;
+  background-color: transparent;
+  color: #e62b28;
+}
+
+.btn_open {
   margin-right: 10px;
+  background-color: #24a2aa;
+  padding: 10px;
+  color: #21282d;
+  width: 130px;
+  border: solid 1px transparent;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: 400;
+  transition: linear .5s;
 }
 
-.delete {
-  background-color: #ff6b6b;
+.btn_open:hover {
+  cursor: pointer;
+  border: solid 1px #24a2aa;
+  background-color: transparent;
+  color: #24a2aa;
+}
+
+.btn_modal {
+  margin-right: 10px;
+  background-color: #24a2aa;
+  padding: 10px;
+  color: #21282d;
+  width: 160px;
+  border: solid 1px transparent;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: 400;
+  transition: linear .5s;
+}
+
+.btn_modal:hover {
+  cursor: pointer;
+  border: solid 1px #24a2aa;
+  background-color: transparent;
+  color: #24a2aa;
 }

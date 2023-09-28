@@ -1,0 +1,29 @@
+.page-list {
+  margin-top: 30px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item {
+  border: solid 1px #aadcd3;
+  display: block;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #aadcd3;
+}
+
+.item:hover {
+  cursor: pointer;
+  color: #fffefe;
+  background-color: #4c4e4f;
+}
+
+.active {
+  display: block;
+  padding: 10px 20px;
+  color: #21282d;
+  background-color: #aadcd3;
+}

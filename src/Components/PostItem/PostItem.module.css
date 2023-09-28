@@ -1,10 +1,11 @@
 .list-item {
-  width: 90%;
+  width: 100%;
   margin: 10px auto;
   padding: 20px;
   border-radius: 14px;
-  border: 1px solid #000;
-  background: #FFF;
+  border: 1px solid #aadcd3;
+  background: transparent;
+  color: #aadcd3;
 }
 
 .content {
@@ -14,22 +15,20 @@
   align-items: center;
 }
 
-.content::before {
-  margin-right: 25px;
-  content: '';
-  width: 17px;
-  height: 17px;
-  border: 1px solid #000;
-}
-
 .info {
   flex-grow: 2;
+  margin-right: 20px;
 }
 
 .info h3 {
-  font-family: 'Caveat', cursive;
+  font-weight: 600;
   font-size: 30px;
   line-height: 40px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
 }
 
 .info p {

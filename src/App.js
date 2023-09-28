@@ -1,63 +1,35 @@
-import React, {useState} from "react";
-import PostList from "./Components/PostList/PostList";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+
 import css from './App.module.css';
-import Form from "./Components/Form/Form";
-import PostFilter from "./Components/PostFilter/PostFilter";
-import Modal from "./Components/Modal/Modal";
-import Button from "./Components/Button/Button";
-import { useSortedAndFilteredPosts, useSortedPosts } from "./Hooks/usePost";
+import NavBar from "./Components/NavBar/NavBar";
+import AuthContext from "./Context/context";
+import AppRouters from "./Routers/AppRouters";
+
 
 function App() {
+
+  const [isAuth, setIsAuth] = useState(false);
   
-  const [posts, setPosts] = useState([
-    {
-      id: 'id-1',
-      title: 'How To Learn React',
-      body: 'Lorem dkf;dkv kdldk;ckdl ;kdlfldjld ksjdljlfj',
-    },
-
-    {
-      id: 'id-2',
-      title: 'A To Learn HTML',
-      body: 'Borem dkf;dkv kdldk;ckdl ;kdlfldjld ksjdljlfj',
-    },
-
-    {
-      id: 'id-3',
-      title: 'Now To Learn JS',
-      body: 'Aorem dkf;dkv kdldk;ckdl ;kdlfldjld ksjdljlfj',
-    },
-  ]);
-  const [filter, setFilter] = useState({ select: '', search: '' });
-  const [modal, setModal] = useState(false);
+  useEffect(() => {
+    if (localStorage.getItem('auth')) {
+      setIsAuth(true);
+    }
+  }, [])
   
-  const sortedPosts = useSortedPosts(posts, filter.select);
-  const sortedAndSelectedPosts = useSortedAndFilteredPosts(sortedPosts, filter.search);
-
-
-  const addNewPost = (newPost) => {
-    setPosts([...posts, newPost])
-  }
-
-  const removePost = (id) => {
-    setPosts(posts.filter(post => post.id !== id))
-  }
-
   return (
     <div className={css.app}>
-      <h1>Daily Planner</h1>
+      <AuthContext.Provider value={{
+        isAuth,
+        setIsAuth
+      }}>
 
-      <Button name={ 'Add New Post'} type={'modal'} setModal={setModal} />
+        <BrowserRouter basename="/BlogApp">
+          <NavBar />
+          <AppRouters/>
+        </BrowserRouter>
 
-      
-      <Modal visible={modal} setModal={setModal}>
-        <Form addPost={addNewPost} setModal={setModal}/>
-      </Modal>
-      
-      
-      <PostFilter filter={filter} setFilter={setFilter} />
-
-      {sortedAndSelectedPosts && <PostList title={"Tasks for Today"} posts={ sortedAndSelectedPosts } remove={removePost} />}
+      </AuthContext.Provider>
     </div>
   );
 }

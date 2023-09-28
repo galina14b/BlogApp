@@ -1,7 +1,9 @@
-.select {
-  width: 20%;
-  padding: 0 10px;
+.input {
+  width: 40%;
   border-radius: 10px;
   background-color: #aadcd3;
   color: #21282d;
+  outline: none;
+  padding: 10px;
 }
+
