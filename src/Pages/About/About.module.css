@@ -1,7 +1,13 @@
 .page {
   margin: 0 auto;
-    padding: 50px 40px;
-    max-width: 1200px;
-    width: 100%;
-    height: 100vh;
+  padding: 50px 40px;
+  max-width: 1200px;
+  width: 100%;
+  height: 100vh;
+  color: #aadcd3;
+}
+
+h1 {
+  color: #e62b28;
+  font-weight: 600;
 }

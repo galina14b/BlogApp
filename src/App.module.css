@@ -8,15 +8,17 @@
   font-weight: 200;
 }
 
-.app {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100rem;
-  width: 100%;
+body {
+  height: 100%;
   background-color: #21282d;
+}
+
+.app {
+  width: 100%;
+  padding: 0 10px 50px ;
+  height: fit-content;
+  background-color: #21282d;
+  background-size: cover;
   color: #3b313d;
 }
 

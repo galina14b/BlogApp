@@ -4,7 +4,13 @@ import css from './PostFilter.module.css';
 const PostFilter = ({ filter, setFilter }) => {
   return (
     <>
-      <input className={css.input} value={filter.search} type="text" onChange={(e) => setFilter({...filter, search: e.target.value})}></input>
+      <input
+        className={css.input}
+        value={filter.search}
+        type="text"
+        onChange={(e) => setFilter({ ...filter, search: e.target.value })}
+        placeholder={'Searching for...'}
+      ></input>
 
       <Select options={[
         { value: 'title', name: 'According to title' },

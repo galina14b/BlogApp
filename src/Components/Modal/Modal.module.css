@@ -10,7 +10,7 @@
 .modal-content {
   width: 70%;
   position: relative;
-  top: 15%;
+  top: 30vh;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;

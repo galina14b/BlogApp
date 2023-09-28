@@ -7,3 +7,7 @@
   padding: 10px;
 }
 
+.input::placeholder {
+  color: #21282d;
+}
+

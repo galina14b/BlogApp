@@ -1,10 +1,11 @@
 .page-list {
-  margin-top: 30px;
+  margin-top: 50px;
+  padding: 0 0 100px 0;
   list-style: none;
-  padding: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+    background-color: #21282d;
 }
 
 .item {
