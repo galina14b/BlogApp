@@ -6,9 +6,9 @@ import useFetching from '../../Hooks/useFetching';
 import Loader from '../../Components/Loader/Loader';
 import { getCommentsByPostId, getPostById } from '../../Components/PostServer/PostServer';
 import Error from '../../Components/Error/Error';
-import css from "./Post.module.css";
+import css from "./PostPage.module.css";
 
-const Post = () => {
+const PostPage = () => {
 
   let params = useParams();
   const [post, setPost] = useState({});
@@ -64,4 +64,4 @@ const Post = () => {
   )
 }
 
-export default Post;
+export default PostPage;

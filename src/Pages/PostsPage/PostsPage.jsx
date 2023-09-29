@@ -4,7 +4,7 @@ import { useSortedAndFilteredPosts, useSortedPosts } from "../../Hooks/usePost";
 import useFetching  from "../../Hooks/useFetching";
 import usePages from "../../Hooks/usePages";
 
-import css from './Posts.module.css';
+import css from './PostsPage.module.css';
 
 import PostList from "../../Components/PostList/PostList";
 import Form from "../../Components/Form/Form";
@@ -16,7 +16,7 @@ import Pagination from "../../Components/Pagination/Pagination";
 import Error from "../../Components/Error/Error";
 import Loader from '../../Components/Loader/Loader';
 
-const Posts = () => {
+const PostsPage = () => {
   
   const [posts, setPosts] = useState([]);
   const [filter, setFilter] = useState({ select: '', search: '' });
@@ -85,4 +85,4 @@ const Posts = () => {
   );
 }
 
-export default Posts;
+export default PostsPage;

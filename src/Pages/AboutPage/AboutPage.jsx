@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import AuthContext from '../../Context/context';
-import Login from '../Login/Login';
-import css from './About.module.css';
+import Login from '../../Components/Login/Login';
+import css from './AboutPage.module.css';
 
-const About = () => {
+const AboutPage = () => {
   const context = useContext(AuthContext);
 
   return (
@@ -18,4 +18,4 @@ const About = () => {
   )
 }
 
-export default About;
+export default AboutPage;
