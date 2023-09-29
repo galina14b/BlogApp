@@ -1,6 +1,6 @@
 .navbar {
-  padding: 25px 40px;
-  position: absolute;
+  width: 15%;
+  min-width: 105px;
 }
 
 .list {
@@ -14,26 +14,26 @@
 .link {
   margin-right: 30px;
   text-decoration: none;
-  color: #aadcd3;
+  color: #a1cdcc;
   font-weight: 600;
   border-bottom: solid 2px transparent;
   transition: linear .5s;
 }
 
 .link:hover {
-  border-bottom: solid 2px #aadcd3;}
+  border-bottom: solid 2px #a1cdcc;}
 
 .nav .active {
-  border-bottom: solid 2px #aadcd3;
+  border-bottom: solid 2px #a1cdcc;
   margin-right: 30px;
   text-decoration: none;
-  color: #aadcd3;
+  color: #a1cdcc;
   font-weight: 600;
 }
 
 .btn {
   margin-right: 30px;
-  color: #aadcd3;
+  color: #a1cdcc;
   font-weight: 600;
   border: none;
   border-bottom: solid 2px transparent;
@@ -42,6 +42,6 @@
 }
 
 .btn:hover {
-  border-bottom: solid 2px #aadcd3;
+  border-bottom: solid 2px #a1cdcc;
   cursor: pointer;
 }

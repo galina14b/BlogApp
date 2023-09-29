@@ -1,13 +1,20 @@
 .page {
   margin: 0 auto;
-  padding: 50px 40px;
-  max-width: 1200px;
-  width: 100%;
+  width: 80%;
   height: 100vh;
-  color: #aadcd3;
+  color: #a1cdcc;
 }
 
-h1 {
-  color: #e62b28;
+.title {
+  margin-bottom: 20px;
+  color: #da5161;
   font-weight: 600;
+}
+
+
+@media all and (max-width: 530px) {
+  .title {
+    font-size: 30px;
+    line-height: 35px;
+  }
 }

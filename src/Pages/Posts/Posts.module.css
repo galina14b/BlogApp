@@ -1,8 +1,6 @@
 .page {
   margin: 0 auto;
-  padding: 50px 40px;
-  max-width: 1200px;
-  width: 100%;
+  width: 80%;
   height: 100vh;
 }
 
@@ -13,7 +11,19 @@
 }
 
 h1 {
-  color: #e62b28;
+  color: #da5161;
   text-align: left;
 }
 
+@media all and (max-width: 655px) {
+  .actions {
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 530px) {
+  .page h1 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}

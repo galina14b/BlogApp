@@ -8,7 +8,7 @@ const About = () => {
 
   return (
     <div className={css.page}>
-      <h1>Welcome to Blog App</h1>
+      <h1 className={css.title}>Welcome to Blog App</h1>
       <p>Here you can find a lot of works and comments to them. Sort posts, delete or add your own. 
         If you want to start - log in.
       </p>

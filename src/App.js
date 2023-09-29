@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 
-import css from './App.module.css';
 import NavBar from "./Components/NavBar/NavBar";
 import AuthContext from "./Context/context";
 import AppRouters from "./Routers/AppRouters";
+import css from './App.module.css';
 
 
 function App() {

@@ -12,7 +12,7 @@ const Form = ({ addPost, setModal }) => {
     event.preventDefault();
     addPost({ id: new Date(), ...post });
     setPost({ title: '', body: '' });
-    setModal(false)
+    setModal(false);
   }
 
   return (

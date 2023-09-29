@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+
+import useFetching from '../../Hooks/useFetching';
+
 import Loader from '../../Components/Loader/Loader';
 import { getCommentsByPostId, getPostById } from '../../Components/PostServer/PostServer';
-import useFetching from '../../Hooks/useFetching';
+import Error from '../../Components/Error/Error';
 import css from "./Post.module.css";
 
 const Post = () => {
@@ -10,6 +13,7 @@ const Post = () => {
   let params = useParams();
   const [post, setPost] = useState({});
   const [comments, setComments] = useState([]);
+
   const [postFetching, postIsLoading, postError] = useFetching(async () => {
     const result = await getPostById(params.id);
     setPost(result.data);
@@ -24,15 +28,13 @@ const Post = () => {
     commFetching()
   }, [])
 
-
-
   return (
     <div className={css.page}>
       <h3 className={css.title}>Post</h3>
 
-      {postError && <h3>No post</h3>}
-      {postIsLoading && <Loader/>}
-
+      {postError && <Error/>}
+      {postIsLoading && <Loader />}
+      
         
       {Object.keys(post).length && <div className={css.post}>
 

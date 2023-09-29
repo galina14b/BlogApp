@@ -10,25 +10,37 @@
 
 body {
   height: 100%;
-  background-color: #21282d;
+  background-color: #30303f;
 }
 
 .app {
+  margin: 0 auto;
   width: 100%;
-  padding: 0 10px 50px ;
+  max-width: 1440px;
+  padding: 30px 40px;
   height: fit-content;
-  background-color: #21282d;
-  background-size: cover;
-  color: #3b313d;
+  color: #30303f;
+  display: flex;
+  justify-content: space-between;
 }
 
 h1 {
-  text-align: center;
-  font-size: 64px;
+  font-size: 60px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 65px;
   letter-spacing: -0.32px;
   text-transform: capitalize;
 }
 
+@media all and (max-width: 775px) {
+  .app {
+    padding: 30px 20px;
+  }
+}
+
+@media all and (max-width: 375px) {
+  .app {
+    padding: 20px 10px;
+  }
+}

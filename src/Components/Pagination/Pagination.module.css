@@ -5,26 +5,44 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-    background-color: #21282d;
+  flex-wrap: wrap;
 }
 
 .item {
-  border: solid 1px #aadcd3;
+  border: solid 1px #a1cdcc;
   display: block;
   padding: 10px 20px;
   background-color: transparent;
-  color: #aadcd3;
+  color: #a1cdcc;
 }
 
 .item:hover {
   cursor: pointer;
-  color: #fffefe;
+  color: #a1cdcc;
   background-color: #4c4e4f;
 }
 
 .active {
   display: block;
   padding: 10px 20px;
-  color: #21282d;
-  background-color: #aadcd3;
+  color: #30303f;
+  background-color: #a1cdcc;
+}
+
+@media all and (max-width: 745px) {
+  .page-list {
+    justify-content: center;
+  }
+
+  .item,
+  .active {
+    margin-bottom: 10px;
+  }
+}
+
+@media all and (max-width: 470px) {  
+  .item,
+  .active {
+    padding: 10px;
+  }
 }

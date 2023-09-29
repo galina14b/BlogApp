@@ -1,8 +1,6 @@
 .page {
   margin: 0 auto;
-  padding: 50px 40px;
-  max-width: 1200px;
-  width: 100%;
+  width: 80%;
   height: 100vh;
 }
 
@@ -11,9 +9,9 @@
   margin: 10px auto 80px;
   padding: 40px;
   border-radius: 14px;
-  border: solid 1px #aadcd3;
+  border: solid 1px #a1cdcc;
   background: transparent;
-  color: #aadcd3;
+  color: #a1cdcc;
 }
 
 .post-title {
@@ -22,7 +20,7 @@
   line-height: 40px;
   text-transform: capitalize;
   font-weight: 600;
-  color: #e62b28;
+  color: #da5161;
 }
 
 .title {
@@ -30,17 +28,17 @@
   text-align: left;
   font-size: 44px;
   font-weight: 700;
-  color: #24a2aa;
+  color: #a1cdcc;
 }
 
 .comments {
-  color: #aadcd3;
+  color: #a1cdcc;
 }
 
 .comm-item {
   margin: 20px 0;
-  padding: 10px;
-  border-bottom: solid 1px #24a2aa;
+  padding: 10px 0;
+  border-bottom: solid 1px #a1cdcc;
 }
 
 .comm-title {
@@ -50,5 +48,54 @@
 }
 
 .comm-email {
-  color: #e62b28;
+  color: #da5161;
+}
+
+@media all and (max-width: 525px) {
+  .post {
+    margin-bottom: 30px;
+    padding: 15px;
+  }
+
+  .post-title,
+  .comm-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .title {
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+@media all and (max-width: 460px) {
+   .post {
+      padding: 10px;
+    }
+
+    .comm-item p {
+      font-size: 16px;
+      line-height: 20px;
+    }
+}
+
+@media all and (max-width: 385px) {
+  .comm-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@media all and (max-width: 370px) {
+  .comm-title {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .comm-item p {
+    font-size: 13px;
+    line-height: 16px;
+  }
 }

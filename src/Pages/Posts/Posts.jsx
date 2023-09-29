@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
 
+import { useSortedAndFilteredPosts, useSortedPosts } from "../../Hooks/usePost";
+import useFetching  from "../../Hooks/useFetching";
+import usePages from "../../Hooks/usePages";
+
+import css from './Posts.module.css';
+
 import PostList from "../../Components/PostList/PostList";
 import Form from "../../Components/Form/Form";
 import PostFilter from "../../Components/PostFilter/PostFilter";
 import Modal from "../../Components/Modal/Modal";
 import Button from "../../Components/Button/Button";
-import { useSortedAndFilteredPosts, useSortedPosts } from "../../Hooks/usePost";
-import useFetching  from "../../Hooks/useFetching";
 import { getAll } from "../../Components/PostServer/PostServer";
-import usePages from "../../Hooks/usePages";
 import Pagination from "../../Components/Pagination/Pagination";
-import css from './Posts.module.css';
+import Error from "../../Components/Error/Error";
 import Loader from '../../Components/Loader/Loader';
 
 const Posts = () => {
@@ -67,7 +70,8 @@ const Posts = () => {
       
       {isLoading && <Loader/>}
 
-      {error && <h2>Error: { error}</h2>}
+      {error && <Error />}
+      
       
       {sortedAndSelectedPosts ?
         <PostList title={''} posts={sortedAndSelectedPosts} remove={removePost} isLoading={isLoading} />

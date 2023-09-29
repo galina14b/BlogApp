@@ -10,14 +10,20 @@
 .modal-content {
   width: 70%;
   position: relative;
-  top: 30vh;
+  top: 100px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
   padding: 20px;
   border-radius: 14px;
-  background: #aadcd3;
+  background: #a1cdcc;
 }
 
 .modal-open {
   display: flex;
+}
+
+@media all and (max-width: 645px) {
+  .modal-content {
+    width: 90%;
+  }
 }

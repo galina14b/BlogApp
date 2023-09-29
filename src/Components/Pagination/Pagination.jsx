@@ -4,10 +4,10 @@ import css from './Pagination.module.css';
 const Pagination = ({ numberOfPages, setPage, page }) => {
   const pagesArray = usePagesArray(numberOfPages);
 
-
   return (
     <div className={css.pagination}>
       <ul className={css['page-list']}>
+
         {pagesArray.map(item => {
           return (
             <li key={item}
@@ -16,6 +16,7 @@ const Pagination = ({ numberOfPages, setPage, page }) => {
             </li>  
           )
         })}
+        
       </ul>
     </div>
   )

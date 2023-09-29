@@ -16,12 +16,12 @@
 .btn {
   margin: 0 auto;
   display: block;
-  color: #fffefe;  
+  color: #a1cdcc;  
   width: 70%;
   height: 50px;
   border: solid 1px transparent;
   font-size: 16px;
-  background: #e62b28;
+  background: #da5161;
   border-radius: 10px;
   font-weight: 500;
   transition: linear .5s;
@@ -30,6 +30,24 @@
 .btn:hover {
   cursor: pointer;
   background-color: transparent;
-  border: solid 1px #e62b28;
-  color: #e62b28;
+  border: solid 1px #da5161;
+  color: #da5161;
+}
+
+@media all and (max-width: 768px) {
+  .input,
+  .btn {
+    width: 100%;
+  }
+
+  .input {
+    padding: 20px;
+  }
+}
+
+@media all and (max-width: 475px) {
+  .input {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }

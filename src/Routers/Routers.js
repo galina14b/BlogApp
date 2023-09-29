@@ -41,12 +41,6 @@ const publicRouters = [
   },
   {
     id: "id-2",
-    path: "/posts",
-    component: <Login/>,
-    exact: 'true'
-  },
-  {
-    id: "id-2",
     path: "*",
     component: <Error/>,
     exact: 'true'

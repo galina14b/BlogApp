@@ -1,7 +1,13 @@
 .select {
   width: 20%;
-  padding: 0 10px;
+  padding: 10px;
   border-radius: 10px;
-  background-color: #aadcd3;
-  color: #21282d;
+  background-color: #a1cdcc;
+  color: #30303f;
+}
+
+@media all and (max-width: 655px) {
+  .select {
+    width: 100%;
+  }
 }

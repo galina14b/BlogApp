@@ -1,13 +1,19 @@
 .input {
   width: 40%;
   border-radius: 10px;
-  background-color: #aadcd3;
-  color: #21282d;
+  background-color: #a1cdcc;
+  color: #30303f;
   outline: none;
   padding: 10px;
 }
 
 .input::placeholder {
-  color: #21282d;
+  color: #30303f;
 }
 
+@media all and (max-width: 655px) {
+  .input {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
