@@ -42,15 +42,10 @@
 
   .buttons {
     margin-top: 20px;
+    justify-content: end;
   }
 }
 
-@media all and (max-width: 470px) {
-
-  .buttons {
-    flex-direction: column;
-  }
-}
 
 @media all and (max-width: 405px) {
   .info h3 {

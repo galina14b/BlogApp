@@ -30,6 +30,7 @@ const PostPage = () => {
 
   return (
     <div className={css.page}>
+      <div className={css['icon_post']}></div>
       <h3 className={css.title}>Post</h3>
 
       {postError && <Error/>}
@@ -42,6 +43,7 @@ const PostPage = () => {
         <p>{post.body}</p>
       </div>}
 
+      <div className={css['icon_comments']}></div>
       <h3 className={css.title}>Comments</h3>
 
       {commError && <h3>No Comments</h3>}
@@ -52,6 +54,7 @@ const PostPage = () => {
 
         {comments.map(item => {
           return <div key={item.id} className={css['comm-item']}>
+            <div className={css['icon_comm']}></div>
             <h3 className={css['comm-title']}>{item.name}</h3>
             <p className={css['comm-email']}>{item.email}</p>
             <p>{item.body}</p>

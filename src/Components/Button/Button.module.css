@@ -2,12 +2,20 @@
   background-color: #da5161;
   padding: 10px;
   color: #30303f;
-  width: 130px;
+  width: 60px;
   border: solid 1px transparent;
   font-size: 16px;
   border-radius: 10px;
   font-weight: 400;
   transition: linear .5s;
+}
+
+.btn {
+  background-image: url('../../Icons/Delete.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 60px;
 }
 
 .btn:hover {
@@ -22,12 +30,19 @@
   background-color: #a1cdcc;
   padding: 10px;
   color: #30303f;
-  width: 130px;
+  width: 60px;
   border: solid 1px transparent;
   font-size: 16px;
   border-radius: 10px;
   font-weight: 400;
   transition: linear .5s;
+}
+
+.btn_open {
+  background-image: url('../../Icons/Read.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60px;
 }
 
 .btn_open:hover {
@@ -42,12 +57,19 @@
   background-color: #a1cdcc;
   padding: 10px;
   color: #30303f;
-  width: 160px;
+  width: 60px;
   border: solid 1px transparent;
   font-size: 16px;
   border-radius: 10px;
   font-weight: 400;
   transition: linear .5s;
+}
+
+.btn_modal {
+  background-image: url('../../Icons/Write.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60px;
 }
 
 .btn_modal:hover {
@@ -60,19 +82,15 @@
 @media all and (max-width: 655px) {
   .btn_modal {
     margin-bottom: 10px;
-    width: 100%;
+    margin-left: auto;
   }
 }
 
-@media all and (max-width: 470px) {
+@media all and (max-width: 480px) {
 
   .btn_open,
   .btn {
-    width: 100%;
-    margin: 0;
-  }
-
-  .btn_open {
-    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
   }
 }

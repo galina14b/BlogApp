@@ -8,6 +8,7 @@ const AboutPage = () => {
 
   return (
     <div className={css.page}>
+      <div className={css.icon}></div>
       <h1 className={css.title}>Welcome to Blog App</h1>
       <p>Here you can find a lot of works and comments to them. Sort posts, delete or add your own. 
         If you want to start - log in.

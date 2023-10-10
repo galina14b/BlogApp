@@ -15,6 +15,7 @@
 }
 
 .post-title {
+  display: inline-block;
   margin-bottom: 20px;
   font-size: 30px;
   line-height: 40px;
@@ -24,6 +25,7 @@
 }
 
 .title {
+  display: inline-block;
   margin-bottom: 40px;
   text-align: left;
   font-size: 44px;
@@ -42,6 +44,7 @@
 }
 
 .comm-title {
+  display: inline-block;
   font-size: 30px;
   line-height: 40px;
   text-transform: capitalize;
@@ -49,6 +52,39 @@
 
 .comm-email {
   color: #da5161;
+}
+
+.icon_post {
+  vertical-align: bottom;
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  background-image: url('../../Icons/Blog.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+}
+
+.icon_comments {
+  vertical-align: bottom;
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  background-image: url('../../Icons/Comment.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+}
+
+.icon_comm {
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  background-image: url('../../Icons/Comment2.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
 }
 
 @media all and (max-width: 525px) {
@@ -67,6 +103,18 @@
     margin-bottom: 20px;
     font-size: 30px;
     line-height: 35px;
+  }
+
+  .icon_post,
+  .icon_comments {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+  }
+
+  .icon_comm {
+    width: 20px;
+    height: 20px;
   }
 }
 
